@@ -106,6 +106,9 @@ namespace WindowsFormsApp4
 			}
 	
 		}
-		
+		public void timekiller(int time)
+        {
+			this.time -= time;
+        }
 	}
 }

@@ -194,7 +194,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(738, 190);
+            this.button6.Location = new System.Drawing.Point(738, 192);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 30);
             this.button6.TabIndex = 14;
@@ -204,7 +204,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(738, 227);
+            this.button7.Location = new System.Drawing.Point(738, 228);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(30, 29);
             this.button7.TabIndex = 15;
@@ -243,7 +243,7 @@
             // textBox7
             // 
             this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(698, 268);
+            this.textBox7.Location = new System.Drawing.Point(698, 263);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(22, 22);
             this.textBox7.TabIndex = 19;

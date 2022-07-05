@@ -51,14 +51,14 @@ namespace WindowsFormsApp4
                         oldlocation = seva.Location; 
                         seva.Location = locations[1];
                         textBox9.Text = seva.Location;
+                        seva.timekiller(5);
+                        textBox4.Text = Convert.ToString(seva.time);
                         break;
                     }
                 case "Подъезд":
                     {
-                        if (oldlocation == "Вход в дом")
-                        {
-                            
-                        }
+                        seva.timekiller(5);
+                        textBox4.Text = Convert.ToString(seva.time);
                         oldlocation = seva.Location;
                         seva.Location = locations[2];
                         textBox9.Text = seva.Location;
@@ -72,6 +72,8 @@ namespace WindowsFormsApp4
                     {
                         if (oldlocation == "Площадка")
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             oldlocation = seva.Location;
                             seva.Location = locations[1];
                             textBox9.Text = seva.Location;
@@ -90,6 +92,8 @@ namespace WindowsFormsApp4
                         }
                         else
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             oldlocation = seva.Location;
                             seva.Location = locations[3];
                             textBox9.Text = seva.Location;
@@ -100,12 +104,16 @@ namespace WindowsFormsApp4
                     {
                         if (oldlocation == "Улица")
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             oldlocation = seva.Location;
                             seva.Location = locations[2];
                             textBox9.Text = seva.Location;
                         }
                         else
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             oldlocation = seva.Location;
                             seva.Location = locations[4];
                             textBox9.Text = seva.Location;
@@ -120,6 +128,8 @@ namespace WindowsFormsApp4
                     {
                         if(oldlocation == "Магазин")
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             textBox1.Text = "Ты встретил собутыльников, что ты будешь делать?";
                             button1.Visible=false;
                             button13.Visible = true;
@@ -131,6 +141,8 @@ namespace WindowsFormsApp4
                         }
                         else
                         {
+                            seva.timekiller(5);
+                            textBox4.Text = Convert.ToString(seva.time);
                             textBox1.Text = "Наконец то этот гребанный магазин!";
                             oldlocation = seva.Location;
                             seva.Location = locations[5];
@@ -142,6 +154,8 @@ namespace WindowsFormsApp4
                     }
                 case "Магазин":
                     {
+                        seva.timekiller(5);
+                        textBox4.Text = Convert.ToString(seva.time);
                         textBox1.Text = "Ты стоишь у перехода, как ты пойдешь?";
                         button1.Visible = false;
                         button11.Visible = true;
@@ -159,6 +173,8 @@ namespace WindowsFormsApp4
         private void button2_Click(object sender, EventArgs e)
         {
             seva.seek(textBox1);
+            seva.timekiller(15);
+            textBox4.Text = Convert.ToString(seva.time);
             button2.Visible = false;
         }
 
@@ -270,6 +286,7 @@ namespace WindowsFormsApp4
             if (textBox1.Text == "Успешно")
             {
                 button1.Visible = true;
+                seva.timekiller(15);
                 button3.Visible=false;
                 button5.Visible=false;
                 button10.Visible=false;
@@ -388,6 +405,8 @@ namespace WindowsFormsApp4
             button12.Visible = false;
             button1.Visible = true;
             textBox1.Text = "Ты просто аккуратно перешел дорогу.";
+            seva.timekiller(15);
+            textBox4.Text = Convert.ToString(seva.time);
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -404,6 +423,8 @@ namespace WindowsFormsApp4
                 textBox1.Text = "Не повезло, тебе ногу переехала машина";
                 seva.hp--;
                 button1.Visible = true;
+                button11.Visible = false;
+                button12.Visible = false;
                 seva.status(textBox1);
                 if(textBox1.Text == "Мужик, да ты помер")
                 {
@@ -465,6 +486,8 @@ namespace WindowsFormsApp4
 
         private void button15_Click(object sender, EventArgs e)
         {
+            seva.timekiller(30);
+            textBox4.Text = Convert.ToString(seva.time);
             textBox1.Text = "Ну вот! Уважил!";
             button13.Visible = false;
             button14.Visible = false;
